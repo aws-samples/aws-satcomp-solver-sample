@@ -66,6 +66,24 @@ class Runner:
 
         return run_list
 
+
+class MallobParser:
+    @staticmethod
+    def get_result(output_file):
+        """
+        TODO: Participants should replace this with something more robust for their own solver!
+        """
+        with open(output_file) as f:
+            raw_logs = f.read()
+            if "found result UNSAT" in raw_logs:
+                return "UNSATISFIABLE"
+            elif "found result SAT" in raw_logs:
+                return "SATISFIABLE"
+            elif "UNKNOWN" in raw_logs:
+                return "UNKNOWN"
+            else:
+                return "ERROR"
+
 if __name__ == "__main__":
     request_directory = sys.argv[1]
     runner = Runner(request_directory)
@@ -74,8 +92,11 @@ if __name__ == "__main__":
     cmd = runner.get_command(input_json)
     
     output = runner.run(cmd)
+    result = MallobParser.get_result(output["stdout"])
+    logging.info(f"RESULT: {result}")
     solver_output = {
         "return_code": output["return_code"],
+        "result": result,
         "artifacts": {
             "stdout_path": output["stdout"],
             "stderr_path": output["stderr"]
