@@ -2,7 +2,7 @@
 
 This repository contains two Dockerfiles that build the Mallob distributed solver using the SAT-Comp 2022 infrastructure.  It is intended to be used for teams to understand how to build solvers for SAT-Comp.
 
-**N.B.:** Although this repository is released under the MIT-0 license, the Mallob solver that is built by these Docker files is under the [LGPL 3.0](https://opensource.org/licenses/lgpl-3.0.html) license, and that any use/extensions of Mallob will be governed by that license.
+**N.B.:** Although this repository is released under the MIT-0 license, its Docker files use the third party Mallob solver project. Mallob solver's licensing includes the [LGPL 3.0](https://opensource.org/licenses/lgpl-3.0.html) license.
 
 ## Prerequisites
 
