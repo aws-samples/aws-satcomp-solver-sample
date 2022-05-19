@@ -16,8 +16,6 @@ Please follow the steps in this repository up to the point at which the base con
 
 ## How to Build
 
-## How to Build
-
 To build the Mallob base container: 
 
 1. Navigate to the `base` subdirectory.
