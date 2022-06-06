@@ -7,7 +7,7 @@ This repository contains two Dockerfiles that build the Mallob distributed solve
 ## Prerequisites
 
 First, this build process has been tested only on linux (AL2 and Ubuntu 20).  Builds on other platforms have not been tested.
- 
+
 Second, the build process requires that Docker is installed on the machine.  
 
 Third, the Mallob docker images are built on top of the base containers satcomp-base:leader and satcomp-base:worker.
@@ -16,14 +16,12 @@ Please follow the steps in this repository up to the point at which the base con
 
 ## How to Build
 
-## How to Build
-
-To build the Mallob base container: 
+To build the Mallob base container:
 
 1. Navigate to the `base` subdirectory.
-2. Run `docker build -t mallob_base .`
+2. Run `docker build -t mallob-base .`
 
-To build the Mallob leader container: 
+To build the Mallob leader container:
 
 1. Navigate to the `leader` subdirectory.
 2. Run `docker build -t mallob:leader .`
